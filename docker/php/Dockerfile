@@ -1,5 +1,7 @@
 FROM php:8.2.8-apache
 
+RUN a2enmod rewrite
+
 RUN pecl install xdebug \
     && docker-php-ext-enable xdebug
 
